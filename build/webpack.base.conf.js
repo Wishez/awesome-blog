@@ -4,6 +4,8 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const webpack  = require('webpack');
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -35,7 +37,8 @@ module.exports = {
         enforce: 'pre',
         include: [resolve('src'), resolve('test')],
         options: {
-          formatter: require('eslint-friendly-formatter')
+          formatter: require('eslint-friendly-formatter'),
+          fix: true
         }
       },
       {
@@ -73,5 +76,19 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      generateStatsFile: true,
+      openAnalyzer: false,
+      logLevel: 'info'
+    }),
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ru|eu|en/),
+    new webpack.ProvidePlugin({
+      moment: 'moment-timezone',
+      Cookies: "js-cookie",
+      localforage: 'localforage'
+    })
+  ]
 }
