@@ -16,6 +16,7 @@
   "dependencies": {
     "animejs": "^2.2.0",
     "axios": "^0.18.0",
+    "breakpoint-sass": "^2.7.1",
     "js-cookie": "^2.2.0",
     "localforage": "^1.7.2",
     "lodash.merge": "^4.6.1",

@@ -1,5 +1,7 @@
 .v {
   &--fade {
+    will-change: opacity;
+
     &-enter-active,
     &-leave-active { transition: all 275ms cb() }
 
@@ -11,6 +13,8 @@
   }
 
   &--mask {
+    will-change: opacity;
+    
     &-enter-active,
     &-leave-active { transition: all 150ms cb() 500ms }
 

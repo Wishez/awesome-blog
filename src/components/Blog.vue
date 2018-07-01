@@ -22,15 +22,14 @@ export default {
   components: { BlogFeed, BlogPost, BlogNav, BlogFooter },
   resource: 'Blog',
   props: {
-    slug: String,
-    // author: String
+    slug: String
   },
   data() {
     return {
       navs: 0,
       title: 'Filipp Zhuravlev',
       labels: {
-        slug: '',
+        slug: 'Покинуть режим чтения',
         author: 'Filipp Zhuravlev'
       }
     }
@@ -44,9 +43,7 @@ export default {
       let filters = {}
 
       if (this.slug) filters.slug = this.slug
-      // if (this.author) filters.author = this.author
 
-      console.log(this.slug);
       return filters
     }
   },
@@ -56,9 +53,10 @@ export default {
       if (to !== from) this.navs++
     }
   },
+
   beforeMount() {
-    this.$store.dispatch('getArticles', {silent:false})
-      .then(posts => { console.log(posts);})
-    // this.$getResource('blog')
+    // this.$store.dispatch('getBlogInfo')
+      // .then(posts => { console.log(posts);})
+
   }
 }</script>

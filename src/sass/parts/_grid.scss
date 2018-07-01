@@ -1,0 +1,194 @@
+$i: !important;
+
+.grow {
+  flex-grow: 1;
+
+  @media (--phone) {
+    &_phone {
+      flex-grow: 1;
+    }
+  }
+
+	&_max {
+		flex-grow: 9999;
+	}
+}
+
+.notRestAlone:nth-last-child(2):nth-child(4n) {
+  min-width: 66%;
+}
+
+.order {
+	&_first {
+		order: -1;
+	}
+
+	&_last {
+		order: 999;
+	}
+}
+
+.parent {
+  display: flex;
+
+  &_inline {
+    display: inline-flex;
+  }
+
+  &_force {
+    display: flex $i;
+  }
+}
+
+.row {
+  flex-direction: row;
+
+  @media (--phone) {
+    &_phone {
+      flex-direction: row;
+    }
+  }
+
+  &_reverse {
+    @media (--phone) {
+      &-phone {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
+.wrap {
+  flex-wrap: wrap;
+
+  @media (--phone) {
+    &_phone {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.h-around {
+  justify-content: space-around;
+
+  @media (--phone) {
+    &_phone {
+      justify-content: space-around;
+    }
+  }
+}
+
+.h-between {
+  justify-content: space-between;
+}
+
+.h-start {
+  justify-content: flex-start;
+}
+
+.h-end {
+  justify-content: flex-end;
+
+  @media (--tablet) {
+    &_tablet {
+      justify-content: flex-end;
+    }
+  }
+
+  @media (--phone) {
+    &_phone {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.h-centered {
+  justify-content: center;
+
+  @media (--tablet) {
+    &_tablet {
+      justify-content: center;
+    }
+  }
+
+  @media (--phone) {
+    &_phone {
+      justify-content: center;
+    }
+  }
+}
+
+.h-s-end {
+  justify-self: flex-end;
+}
+
+.h-s-start {
+  justify-self: flex-start;
+}
+
+.h-s-centered {
+  justify-self: center;
+}
+
+.v-centered {
+  align-items: center;
+
+  @media (--tablet) {
+    &_tablet {
+      align-items: center;
+    }
+  }
+
+  @media (--phone) {
+    &_phone {
+      align-items: center;
+    }
+  }
+}
+
+.v-start {
+  align-items: flex-start;
+}
+
+.v-end {
+  align-items: flex-end;
+}
+
+.v-s-end {
+  align-self: flex-end;
+}
+
+.v-s-start {
+  align-self: flex-start;
+}
+
+.v-s-centered {
+  align-self: center;
+}
+
+.centered {
+  justify-content: center;
+  align-items: center;
+
+  @media (--tablet) {
+    &_tablet {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @media (--phone) {
+    &_phone {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

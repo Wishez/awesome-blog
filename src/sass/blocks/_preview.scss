@@ -18,6 +18,8 @@
     margin: 2.5rem;
   }
 
+  will-change: transform, opacity;
+
   &-move { transition: all 550ms cb() }
   &-enter-active { transition: all 325ms cb(out) 175ms }
   &-appear-enter-active { transition: all 275ms cb(out) 200ms }
@@ -68,15 +70,16 @@
     @extend %txt--preview;
     display: block;
     height: 100%;
-    padding: .75rem;
+    padding: .75rem .4rem 2.5rem 1.5rem;
     color: cc(txt, inv);
     background-color: cc(shadow, 0);
-    transition: background-color 225ms cb();
+    transition-property: background-color, opacity;
+    transition-duration: 225ms;
+    transition-timing-function: cb();
+    will-change: opacity;
+    background-color: cc(shadow, .65);
 
-    .preview__figure--mobile &,
-    &:hover {
-      background-color: cc(shadow, .65);
-    }
+
 
     @media (--monitor) {
       padding-right: 1.5rem;
@@ -85,8 +88,11 @@
 
   &__meta {
     position: absolute;
-    top: 100%;
-    left: 0;
+    transition-property: opacity;
+    transition: opacity 225ms cb();
+    will-change: opacity;
+    bottom: 100%;
+    right: -4px;
     padding: .5rem 0;
     font-size: .9rem;
 
@@ -95,10 +101,7 @@
     }
   }
 
-  &__published::after {
-    content: 'by';
-    padding: 0 .25rem;
-  }
+
 
   &__author {
     @extend %ff--500;

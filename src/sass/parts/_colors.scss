@@ -1,0 +1,11 @@
+$colors: (
+  ($pale-gray, "pale")
+);
+
+.color {
+  @each $color, $colorName in $colors {
+    &_#{$colorName} {
+      color: #{$color};
+    }
+  }
+}

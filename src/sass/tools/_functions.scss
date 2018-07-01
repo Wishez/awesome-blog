@@ -8,6 +8,11 @@
   @return #{$pixels/$context}em;
 }
 
+// em
+@function rem($pixels, $context: 16) {
+  @return #{$pixels/$context}rem;
+}
+
 // color-control
 @function cc($color, $option: false, $alpha: false) {
   $opacity: null;

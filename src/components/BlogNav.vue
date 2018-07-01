@@ -5,7 +5,11 @@
     </h1>
 
     <transition-group tag="menu" name="nav__item" class="nav__menu">
-      <li v-for="label in labels" class="nav__item" :key="label" @click="navBack">
+      <li v-for="label in labels"
+        :key="label"
+        class="nav__item"
+        @click="navBack"
+      >
         <i class="nav__item--icon"></i>
         <span class="nav__item--label">{{ label }}</span>
       </li>

@@ -3,6 +3,31 @@ body {
   position: relative;
   color: cc(txt);
   background-color: cc(bg);
+  line-height: 1.5;
+  word-break: break-word;
+  hyphens: auto;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-size-adjust: 100%;
+  font-variant-ligatures: common-ligatures contextual;
+  font-feauture-settings: "kern", "ling", "clig", "calt";
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: scrollbar;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  // background-color: $background
+  // color: #333b4e
 
   ::selection {
     background-color: cc(selection);

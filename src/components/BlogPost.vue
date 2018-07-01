@@ -4,13 +4,9 @@
       <header class="post__header">
         <h2 class="post__title">{{ post.title }}</h2>
 
-        <h3 class="post__meta">
-          by {{ author.first_name }} {{ author.last_name }}
-          <!-- <router-link class="post__author" -->
-          <!-- :to="`/by/${kebabify(author.username)}`"></router-link> -->
-          <span class="post__sep"></span>
+        <div class="post__meta color_pale">
           <time :datetime="post.created_at">{{ prettyDate(post.created_at) }}</time>
-        </h3>
+        </div>
 
         <!-- <blockquote class="post__subtitle">{{ post.announce_text }}</blockquote> -->
       </header>
@@ -18,8 +14,13 @@
       <section class="post__body rte" v-html="post.text"></section>
 
       <footer class="post__footer">
-        <vue-disqus v-if="commentsReady" shortname="vue-blog-demo"
-          :key="post.slug" :identifier="post.slug" :url="`https://vue-blog-demo.netlify.com/read/${post.slug}`"/>
+        <vue-disqus v-if="commentsReady"
+          :key="post.slug"
+          :identifier="post.slug"
+          :url="`https://filipp-zhuravlev.ru/read/${post.slug}`"
+          api_key="MCHe9Ysg7zlriEp4hgS0924pvMIs7VRt3I8yLfGehExEKARLqt5mmTKnCNKtcePQ"
+          shortname="filipp-zhuravlev"
+        />
       </footer>
     </article>
   </transition>

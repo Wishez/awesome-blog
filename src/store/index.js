@@ -33,7 +33,6 @@ export default new Vuex.Store({
 
             return false;
           } else {
-            console.log(response);
             return response;
           }
         })

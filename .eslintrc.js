@@ -11,7 +11,7 @@ module.exports = {
   },
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
   extends: [
-    // "plugin:vue/recommended",
+    "plugin:vue/recommended",
     'plugin:vue/essential',
     "plugin:prettier/recommended"
   ],

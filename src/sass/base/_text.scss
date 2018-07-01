@@ -35,14 +35,13 @@
 %txt--preview {
   @extend %ff--500;
   font-size: 3rem;
-  text-transform: capitalize;
+  // font-size: 2.7rem;
 
   @media (--laptop) {
-    font-size: 2.7rem;
   }
 
   @media (--desktop) {
-    font-size: 3.2rem;
+    // font-size: 3.2rem;
   }
 }
 
@@ -50,7 +49,6 @@
   @extend %ff--200;
   font-size: 3rem;
   line-height: 1.2;
-  text-transform: capitalize;
 
   @media (--laptop) {
     font-size: 3.2rem;

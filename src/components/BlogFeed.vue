@@ -1,30 +1,52 @@
 <template>
-  <transition-group tag="ul" :name="transition"  class="blog__feed">
-    <li v-for="(post, index) in feed" class="preview" :key="index">
+  <transition-group tag="div" :name="transition"  class="blog__feed">
+    <article v-for="(post, index) in feed"
+      :key="index"
+      class="preview" >
       <figure class="preview__figure" :class="figureClass" :style="getBgImg(post.preview.image)">
         <transition name="v--fade">
-          <figcaption v-if="!reading || $device.phone" class="preview__details">
-            <router-link class="preview__title"
-              :to="`/read/${post.slug}`"
+          <figcaption v-if="!reading || $device.phone"
+            class="preview__details">
+            <h1 class="preview__title parent v-end">
+              <router-link :to="`/read/${post.slug}`"
               @click.native="scrollTo(0, 220, scrollDelay)">
-              {{ post.title }}
-            </router-link>
+                {{ post.title }}
+              </router-link>
+            </h1>
 
             <div class="preview__meta">
-              <time class="preview__published">
+              <time datetime="post.created_at" class="preview__published">
                 {{ prettyDate(post.created_at) }}
               </time>
-
-              <router-link class="preview__author"
-                :to="`/by/${kebabify(post.author.username)}`"
-                @click.native="scrollTo(0, 220, scrollDelay)">
-                {{ post.author.first_name }} {{ post.author.last_name }}
-              </router-link>
             </div>
+
+            <transition-group tag="ul" :name="transition"  class="preview__tags">
+              <li v-for="(tag, index) in post.tags" :key="index" class="tag">
+                <!-- <div class="tag"> -->
+
+                    <!-- <div class="tag-side tag-2-side"> -->
+                        <!-- <div class="tag-text tag-2-text"> -->
+                            {{ tag }}
+
+                            <!-- <div class="rule-diagonal"></div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+
+                    <!-- <div class="tag-side tag-2-side is-back"> -->
+                        <!-- <div class="tag-text tag-2-text"> -->
+                            <!-- Another side of the tag -->
+                            <!-- <div class="rule-diagonal"></div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+
+                <!-- </div> -->
+
+            </li>
+          </transition-group>
           </figcaption>
         </transition>
       </figure>
-    </li>
+    </article>
   </transition-group>
 </template>
 
@@ -54,11 +76,9 @@ export default {
 
     feed() {
       const filterBy = {
-        slug: (filter, { slug }) => filter === slug,
-        // author: (filter, { author }) => filter === this.kebabify(author.username)
+        slug: (filter, { slug }) => filter === slug
       }
 
-      console.log(this.filters, 'filters');
       if (!Object.keys(this.filters).length) return this.posts
 
       return this.posts.filter(post => {
@@ -97,12 +117,35 @@ export default {
       silent:false
     })
       .then(posts => {
+
         if (!Object.keys(this.filters).length) {
           this.stackPosts(posts);
         } else {
+
           this.posts = posts;
           this.transition = 'preview';
         }
+        console.log(this.posts);
       })
   }
 }</script>
+
+<style lang="scss">
+
+.preview__tags.preview__tags {
+  position: absolute;
+  bottom: 102%;
+  color: #5285c4;
+
+  left: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 100px);
+}
+
+
+.tag {
+  border-bottom: 1px dashed #5285c4;
+}
+
+</style>

@@ -1,10 +1,46 @@
+.article *+:not(p) {
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+}
+
+main *+* {
+    margin-top: 1.5em;
+}
+
+$initialHeadingSize: 16;
+$scale: 1.4;
+$headings: (h4, h3, h2);
+
+@each $heading in $headings {
+  #{$heading} {
+    $scaledSize: $initialHeadingSize*$scale;
+    font-size: em($scaledSize);
+
+    $initialHeadingSize: $scaledSize;
+  }
+}
+
 .blog {
+  ol, ul {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
   position: relative;
   min-height: 100vh;
   max-width: 90rem;
   margin: 0 auto;
   padding-top: 6.25rem;
   overflow-x: hidden;
+
+  p {
+    font-size: 1.15rem;
+  }
+
+  ol {
+    list-style-position: inside;
+    list-style-type: upper-roman;
+  }
 
   @media (--tablet) {
     padding: 7.5rem 0;
@@ -15,6 +51,19 @@
 
     &--reading {
       padding-bottom: 0;
+
+      .preview {
+        &__title, &__meta {
+          opacity: 0;
+        }
+
+        &__title {
+            background-color: transparent;
+        }
+      }
+
+
+
     }
   }
 
@@ -43,29 +92,15 @@
   }
 
   &__footer {
+    background: linear-gradient(to top, darken(#5285c4, 15%) 0%, #5285c4 100%) darken(#5285c4, 15%);
+    color: #fff;
+    font-size: 1.1em;
     width: 100%;
-    height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 2.5rem;
-
-    @media (--tablet) {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
-
-    @media (--laptop) {
-      justify-content: flex-start;
-    }
-
-    @media (--desktop) {
-      padding: 0 6.25rem;
-    }
+    position: relative;
+    padding: 3.5rem 1.5rem 4rem 2.5rem;
 
     @media (--monitor) {
-      padding: 0 2.5rem;
+      padding: 3.5rem 5rem 4.5rem 6.25rem;
     }
 
     .signature {

@@ -1,0 +1,15 @@
+.about {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-gap: 0 2.5rem;
+  padding-right: 2.5rem;
+
+  @media (--phone) {
+    & {
+      padding-right: 0;
+      grid-gap: 1.5rem 0;
+      grid-template-columns: 1fr;
+    }
+  }
+
+}

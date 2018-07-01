@@ -2,7 +2,7 @@
   @extend %txt--rte;
 
   p + p {
-    margin-top: 1em;
+    margin-top: 1.5em;
   }
 
   a:hover,
@@ -11,10 +11,14 @@
   }
 
   h3,
-  h4 {
-    margin: 1.25em 0 .75em;
+  h4,
+  h5 {
+    margin: 3em 0 1.5em;
   }
 
+  h5 {
+    font-size: 1.96em
+  }
   em {
     font-style: italic;
   }
