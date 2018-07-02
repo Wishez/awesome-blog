@@ -22,27 +22,16 @@
 
             <transition-group tag="ul" :name="transition"  class="preview__tags">
               <li v-for="(tag, index) in post.tags" :key="index" class="tag">
-                <!-- <div class="tag"> -->
+                {{ tag }}
+              </li>
+            </transition-group>
 
-                    <!-- <div class="tag-side tag-2-side"> -->
-                        <!-- <div class="tag-text tag-2-text"> -->
-                            {{ tag }}
+            <div v-if="post.announce_text"
+              class="previewDescription">
+              <div v-html="post.announce_text" class="previewDescription__content">
 
-                            <!-- <div class="rule-diagonal"></div> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-
-                    <!-- <div class="tag-side tag-2-side is-back"> -->
-                        <!-- <div class="tag-text tag-2-text"> -->
-                            <!-- Another side of the tag -->
-                            <!-- <div class="rule-diagonal"></div> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-
-                <!-- </div> -->
-
-            </li>
-          </transition-group>
+              </div>
+            </div>
           </figcaption>
         </transition>
       </figure>
@@ -61,6 +50,7 @@ export default {
       default: () => {}
     }
   },
+
   data() {
     return {
       posts: [],
@@ -125,27 +115,66 @@ export default {
           this.posts = posts;
           this.transition = 'preview';
         }
-        console.log(this.posts);
       })
   }
 }</script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.previewDescription {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+  &:hover, &:focus {
+    z-index: 1;
+
+    .previewDescription__content {
+      transform: translateX(0);
+    }
+  }
+
+  &__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+      font-size: 1.5rem;
+      padding: 1.5rem 1rem 2.75rem 1.75rem;
+      background-color: rgba(#fff, .9);
+      transform: translateX(-100%);
+      width: 100%;
+      height: 100%;
+      will-change: transform;
+      transition-duration: 210ms;
+      transition-timing-function: cubic-bezier(0.4,0,0.6,1);
+      transition-property: transform;
+  }
+}
+
+
 
 .preview__tags.preview__tags {
   position: absolute;
-  bottom: 102%;
+  top: 102%;
   color: #5285c4;
-
   left: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-columns: repeat(auto-fit, minmax(0px, 100px) );
+  grid-auto-flow: row;
+  width: -webkit-fill-available;
+  grid-gap: 1rem;
 }
 
 
 .tag {
   border-bottom: 1px dashed #5285c4;
+  margin-top: 0;
 }
 
 </style>

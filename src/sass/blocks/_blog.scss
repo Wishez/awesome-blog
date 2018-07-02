@@ -42,6 +42,20 @@ $headings: (h4, h3, h2);
     list-style-type: upper-roman;
   }
 
+  &--reading {
+    padding-bottom: 0;
+
+    .preview {
+      &__title, &__meta {
+        opacity: 0;
+      }
+
+      &__title {
+          background-color: transparent;
+      }
+    }
+  }
+
   @media (--tablet) {
     padding: 7.5rem 0;
   }
@@ -49,22 +63,7 @@ $headings: (h4, h3, h2);
   @media (--desktop) {
     padding: 7.5rem 2.5rem 6.5vw;
 
-    &--reading {
-      padding-bottom: 0;
 
-      .preview {
-        &__title, &__meta {
-          opacity: 0;
-        }
-
-        &__title {
-            background-color: transparent;
-        }
-      }
-
-
-
-    }
   }
 
   @media (--monitor) {

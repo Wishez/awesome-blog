@@ -55,6 +55,10 @@ export default { name: 'blog-footer' }</script>
   margin-top: 3rem;
   margin-bottom: 3rem;
 
+  @media (max-width: 769px) {
+    min-width: 100%;
+  }
+
   &__item {
     margin-top: 1rem;
   }
@@ -66,7 +70,7 @@ export default { name: 'blog-footer' }</script>
 
   svg {
     max-width: 21px;
-    color: #a0c;
+    fill: #bbd9ff;
   }
 }
 
@@ -81,6 +85,7 @@ export default { name: 'blog-footer' }</script>
     overflow: hidden;
     grid-column: span 1;
     grid-row: span 2;
+    justify-self: center;
   }
 
   &__title {
@@ -88,7 +93,10 @@ export default { name: 'blog-footer' }</script>
   }
 
   &__paragraph {
-    transform: translateY(-1.5em);
+
+    @media (min-width: 769px) {
+      transform: translateY(-1.5em);
+    }
   }
 }
 

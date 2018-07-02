@@ -1,0 +1,34 @@
+.cropped {
+
+  &_text {
+    overflow: hidden;
+  	text-overflow: ellipsis;
+  	display: flex;
+  	display: -webkit-box;
+  	-webkit-box-orient: vertical;
+
+    &_6 {
+      -webkit-line-clamp: 6;
+  		height: (6px * 1.5 * 18);
+    }
+  }
+
+
+  &_line {
+    white-space: nowrap;
+  	text-overflow: ellipsis;
+  	overflow: hidden;
+  }
+}
+
+
+
+
+.visible-hidden {
+  white-space: nowrap;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	width: 1px;
+	height: 1px;
+	position: absolute;
+}
