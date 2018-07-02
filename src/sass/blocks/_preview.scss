@@ -6,9 +6,13 @@
   z-index: 0;
   @include imagePlaceholder;
 
+  @media (--phone) {
+    margin-bottom: 8rem;
+  }
+
   @media (--tablet) {
     width: calc(50% - 2.5rem);
-    margin: 1.25rem 1.25rem 2.5rem;
+    margin: 1.25rem 1.25rem 5rem;
   }
 
   @media (--laptop) {
@@ -17,8 +21,10 @@
 
   @media (--desktop) {
     width: calc(100% / 3 - 5rem);
-    margin: 2.5rem;
+    margin: 2.5rem 2.5rem 4.5rem;
   }
+
+
 
   will-change: transform, opacity;
 
