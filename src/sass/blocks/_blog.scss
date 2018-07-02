@@ -43,10 +43,9 @@ $headings: (h4, h3, h2);
   }
 
   &--reading {
-    padding-bottom: 0;
 
     .preview {
-      &__title, &__meta {
+      &__title, &__meta, .viewArticleLink {
         opacity: 0;
       }
 

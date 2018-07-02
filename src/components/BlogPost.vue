@@ -8,7 +8,6 @@
           <time :datetime="post.created_at">{{ prettyDate(post.created_at) }}</time>
         </div>
 
-        <!-- <blockquote class="post__subtitle">{{ post.announce_text }}</blockquote> -->
       </header>
 
       <section class="post__body rte" v-html="post.text"></section>
@@ -27,12 +26,13 @@
 </template>
 
 <script>
-
+import {listenExternalLinks} from '@/constants/events';
 import { kebabify, prettyDate } from '@/constants/helpers'
 export default {
   name: 'blog-post',
   resource: 'BlogPost',
   props: { slug: String },
+
   data() {
     return {
       post: {},
@@ -82,5 +82,13 @@ export default {
     }).catch(error => {
       console.log(error);
     })
+  },
+
+  mounted() {
+    listenExternalLinks();
+  },
+
+  updated() {
+    listenExternalLinks();
   }
 }</script>

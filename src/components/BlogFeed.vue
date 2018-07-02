@@ -2,17 +2,21 @@
   <transition-group tag="div" :name="transition"  class="blog__feed">
     <article v-for="(post, index) in feed"
       :key="index"
-      class="preview" >
-      <figure class="preview__figure" :class="figureClass" :style="getBgImg(post.preview.image)">
+      class="preview"
+      :hidden="!post.slug">
+      <figure class="preview__figure" :class="figureClass" :style="getBgImg(post.preview)">
         <transition name="v--fade">
           <figcaption v-if="!reading || $device.phone"
             class="preview__details">
             <h1 class="preview__title parent v-end">
-              <router-link :to="`/read/${post.slug}`"
-              @click.native="scrollTo(0, 220, scrollDelay)">
                 {{ post.title }}
-              </router-link>
             </h1>
+
+            <router-link :to="`/read/${post.slug}`"
+            class="viewArticleLink"
+            @click.native="scrollTo(0, 220, scrollDelay)">
+              Читать статью
+            </router-link>
 
             <div class="preview__meta">
               <time datetime="post.created_at" class="preview__published">
@@ -20,7 +24,7 @@
               </time>
             </div>
 
-            <transition-group tag="ul" :name="transition"  class="preview__tags">
+            <transition-group tag="ul" :name="transition"  class="preview__tags parent row wrap">
               <li v-for="(tag, index) in post.tags" :key="index" class="tag">
                 {{ tag }}
               </li>
@@ -29,7 +33,6 @@
             <div v-if="post.announce_text"
               class="previewDescription">
               <div v-html="post.announce_text" class="previewDescription__content">
-
               </div>
             </div>
           </figcaption>
@@ -84,8 +87,14 @@ export default {
     kebabify,
     prettyDate,
 
-    getBgImg(src) {
-      return { backgroundImage: `url(${src})` }
+    getBgImg(preview) {
+      const styles = Object.create(null);
+
+      if (preview) {
+        styles.backgroundImage = `url(${preview.image})`
+      }
+
+      return styles;
     },
 
     stackPosts(posts) {
@@ -120,7 +129,29 @@ export default {
 }</script>
 
 <style lang="scss" scoped>
+.preview {
+  &:hover, &:focus {
+    .previewDescription {
+      z-index: 1;
+    }
+  }
+}
+.preview__title  {
+
+  a{
+    color: currentColor;
+  }
+}
+
+.viewArticleLink {
+  position: absolute;
+  bottom: 102%;
+  left: 0;
+  transition-duration: 250ms;
+}
+
 .previewDescription {
+
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -129,10 +160,10 @@ export default {
   height: 100%;
   width: 100%;
   z-index: -1;
+  transition-duration: 300ms;
+  transition-property: z-index;
 
   &:hover, &:focus {
-    z-index: 1;
-
     .previewDescription__content {
       transform: translateX(0);
     }
@@ -164,17 +195,15 @@ export default {
   color: #5285c4;
   left: 0;
   margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0px, 100px) );
-  grid-auto-flow: row;
   width: -webkit-fill-available;
-  grid-gap: 1rem;
 }
 
 
 .tag {
   border-bottom: 1px dashed #5285c4;
   margin-top: 0;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 
 </style>
