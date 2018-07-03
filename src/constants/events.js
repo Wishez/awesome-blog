@@ -1,12 +1,14 @@
 export function listenExternalLinks() {
-  const links = document.querySelector(".not-follow");
-  console.log(links);
-  if (links) {
-    links.addEventListener("click", e => {
-      const url = e.target.getAttribute("href");
+  const links = document.getElementsByClassName("not-follow");
 
-      window.open(url);
-      e.preventDefault();
+  if (links) {
+    Array.from(links).forEach(link => {
+      link.addEventListener("click", e => {
+        const url = e.target.getAttribute("href");
+
+        window.open(url);
+        e.preventDefault();
+      });
     });
   }
 }
