@@ -6,6 +6,8 @@ const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const webpack  = require('webpack');
+const PrerenderSPAPlugin = require('prerender-spa-plugin');
+const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -84,11 +86,30 @@ module.exports = {
       openAnalyzer: false,
       logLevel: 'info'
     }),
-    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ru|eu|en/),
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ru|en/),
     new webpack.ProvidePlugin({
-      moment: 'moment-timezone',
+      // moment: 'moment-timezone',
       Cookies: "js-cookie",
       localforage: 'localforage'
-    })
+    }),
+
+    // == PRERENDER SPA PLUGIN == //
+   // new PrerenderSPAPlugin({
+   //   // Index.html is in the root directory.
+   //   staticDir: config.build.index,
+   //   routes: [ '/' ],
+   //   // Optional minification.
+   //   minify: {
+   //     collapseBooleanAttributes: true,
+   //     collapseWhitespace: true,
+   //     decodeEntities: true,
+   //     keepClosingSlash: true,
+   //     sortAttributes: true
+   //   },
+   //
+   //   renderer: new Renderer({
+   //     renderAfterDocumentEvent: 'render-event'
+   //   })
+   // })
   ]
 }

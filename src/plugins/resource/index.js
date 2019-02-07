@@ -1,5 +1,6 @@
 import cache from './cache'
 import _merge from 'lodash.merge'
+import ax from '@/api/axios'
 
 // install $resource as a Vue plugin
 export default {
@@ -37,8 +38,8 @@ export default {
       if (cache.has(uri)) return resolve(cache.get(uri), mappers)
 
       // fetch, parse and cache resource then pass to resolver
-      return fetch(uri)
-        .then(response => response.json())
+      return ax.get(uri)
+        .then(response => response.data)
         .then(response => cache.set(uri, response))
         .then(response => resolve(response, mappers))
     }

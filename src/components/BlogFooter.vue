@@ -4,14 +4,14 @@
       <article class="about grow">
 
         <h2 class="about__title">Привет!</h2>
-        <p class="about__paragraph">Меня зовут Филипп Журавлёв и я front-end разработчик, время от времени увлекающийся дизайном и back-end архитектурой. </p>
+        <p class="about__paragraph">Меня зовут Филипп Журавлёв! Я front-end разработчик, художник и пианист. Сюда пишу о том, что знаю и в основном это техническая информация. </p>
         <picture class="order_first about__avatar">
-            <source srcset="../assets/avatar.png" media="screen">
-            <img src="../assets/avatar.png" alt="">
+            <source srcset="../assets/avatar.jpg" media="screen">
+            <img src="../assets/avatar.jpg" alt="">
         </picture>
       </article>
 
-      <ul role="nav" class="linksList" aria-label="Список внешних ссылок">
+      <ul role="navigation" class="linksList" aria-label="Список внешних ссылок">
         <li class="linksList__item">
           <a class="parent v-centered" href="https://shining-present.ru" target="_blank">
             <span aria-hidden="true" class="icon">

@@ -192,7 +192,7 @@ export default {
 .preview__tags.preview__tags {
   position: absolute;
   top: 102%;
-  color: #5285c4;
+  color: #4874ab;
   left: 0;
   margin: 0;
   width: -webkit-fill-available;
@@ -200,7 +200,7 @@ export default {
 
 
 .tag {
-  border-bottom: 1px dashed #5285c4;
+  border-bottom: 1px dashed #4874ab;
   margin-top: 0;
   margin-bottom: 1rem;
   margin-right: 1rem;

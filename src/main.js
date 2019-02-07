@@ -22,10 +22,17 @@ Vue.use(deviceQueries, {
 
 Vue.use(VueDisqus);
 /* eslint-disable no-new */
-new Vue({
-  el: "#app",
-  router,
-  store,
-  components: { App },
-  template: "<App/>"
-});
+
+const createApp = () => {
+  return new Vue({
+    el: "#app",
+    router,
+    store,
+    components: { App },
+    template: "<App/>"
+  });
+};
+
+createApp();
+
+export default createApp;

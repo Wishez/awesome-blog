@@ -1,5 +1,5 @@
 import Vue from "vue";
-import moment from "moment-timezone";
+import moment from "moment";
 
 const currentTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
@@ -14,7 +14,6 @@ Vue.filter("formatDate", (date, format = "L") => {
     date = date.replace(/[-\.]/g, "/");
   }
 
-  return moment(date)
-    .tz(currentTimeZone)
-    .formate(format);
+  return moment(date).formate(format);
+  // .tz(currentTimeZone)
 });
