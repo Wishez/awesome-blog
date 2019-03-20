@@ -1,3 +1,5 @@
+import { isNotServer } from "../../utils";
+
 const matchMediaFallback = () => {
   let listeners = [];
   let idle = true;
@@ -29,9 +31,11 @@ const matchMediaFallback = () => {
         return node.clientHeight > node.clientWidth ? "portrait" : "landscape";
       },
       get fontSize() {
-        return window
-          .getComputedStyle(document.documentElement)
-          .getPropertyValue("font-size");
+        return isNotServer()
+          ? window
+              .getComputedStyle(document.documentElement)
+              .getPropertyValue("font-size")
+          : 16;
       }
     };
   })();
@@ -64,24 +68,26 @@ const matchMediaFallback = () => {
     return createHandler(feature, value);
   };
 
-  window.addEventListener("resize", () => {
-    if (!idle) return;
-    idle = false;
+  if (isNotServer()) {
+    window.addEventListener("resize", () => {
+      if (!idle) return;
+      idle = false;
 
-    let width = device.width;
-    let height = device.height;
+      let width = device.width;
+      let height = device.height;
 
-    let timer = setInterval(() => {
-      if (width !== device.width || height !== device.height) {
-        width = device.width;
-        height = device.height;
-      } else {
-        clearTimeout(timer);
-        listeners.forEach(handler => handler());
-        idle = true;
-      }
-    }, 100);
-  });
+      let timer = setInterval(() => {
+        if (width !== device.width || height !== device.height) {
+          width = device.width;
+          height = device.height;
+        } else {
+          clearTimeout(timer);
+          listeners.forEach(handler => handler());
+          idle = true;
+        }
+      }, 100);
+    });
+  }
 
   return queryString => {
     const query = parseQuery(queryString);
@@ -101,6 +107,8 @@ const matchMediaFallback = () => {
   };
 };
 
-const matchMedia = window.matchMedia || matchMediaFallback();
+const matchMedia = isNotServer()
+  ? matchMediaFallback()
+  : window.matchMedia || matchMediaFallback();
 
 export { matchMedia as default };

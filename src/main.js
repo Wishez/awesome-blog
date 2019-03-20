@@ -1,12 +1,8 @@
-import "./startup";
-
 import Vue from "vue";
-import App from "./App";
-import router from "./router";
+import "./startup";
 import "./filters";
 import "./sass/fonts.sass";
-import store from "./store";
-import VueDisqus from "vue-disqus";
+import createApp from "./create-app";
 import deviceQueries from "./plugins/device-queries";
 
 Vue.config.productionTip = false;
@@ -20,19 +16,8 @@ Vue.use(deviceQueries, {
   monitor: "min-width: 1448px"
 });
 
-Vue.use(VueDisqus);
-/* eslint-disable no-new */
+const { store } = createApp();
 
-const createApp = () => {
-  return new Vue({
-    el: "#app",
-    router,
-    store,
-    components: { App },
-    template: "<App/>"
-  });
-};
-
-createApp();
-
-export default createApp;
+if (window.__INITIAL_STATE__) {
+  store.replaceState(window.__INITIAL_STATE__);
+}

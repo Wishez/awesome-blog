@@ -88,10 +88,6 @@ export default { name: 'blog-footer' }</script>
     justify-self: center;
   }
 
-  &__title {
-
-  }
-
   &__paragraph {
 
     @media (min-width: 769px) {

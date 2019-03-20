@@ -4,6 +4,10 @@
 const path = require('path')
 
 module.exports = {
+  server: {
+    assetsRoot: path.resolve(__dirname, '../server-dist'),
+    assetsSubDirectory: '',
+  },
   build: {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),
@@ -25,7 +29,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 3000,
+    port: 3020,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',

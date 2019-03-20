@@ -34,24 +34,20 @@
 
 %txt--preview {
   @extend %ff--500;
-  font-size: 3rem;
-  // font-size: 2.7rem;
-
-  @media (--laptop) {
-  }
+  font-size: 1.75rem;
 
   @media (--desktop) {
-    // font-size: 3.2rem;
+    font-size: 2.25rem;
   }
 }
 
 %txt--title {
-  @extend %ff--200;
-  font-size: 3rem;
+  @extend %ff--700;
+  font-size: 2.5rem;
   line-height: 1.2;
 
   @media (--laptop) {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 }
 

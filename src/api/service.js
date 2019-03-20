@@ -1,17 +1,15 @@
 import ax from "./axios";
 
-export function getTags(params) {
-  return ax.get("/tags", { params }).then(res => res.data);
-}
+const request = ({ url, params, payload, method = "get" }) => {
+  const args = [url];
+  if (params) args.push({ params });
+  if (payload) args.push(payload);
+  return ax[method](...args).then(res => res.data);
+};
 
-export function getArticles(params) {
-  return ax.get("/article", { params }).then(res => res.data);
-}
+const getTags = params => request({ url: "/tags", params });
+const getArticles = params => request({ url: "/article", params });
+const getArticle = slug => request({ url: `/article/${slug}` });
+const likeArticle = payload => reequest({ url: "/like", payload });
 
-export function getArticle(data) {
-  return ax.get(`/article/${data.slug}`).then(res => res.data);
-}
-
-export function likeArticle(data) {
-  return ax.post(`/like`, data).then(res => res.data);
-}
+export { getTags, getArticles, getArticle, likeArticle };

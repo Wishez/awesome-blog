@@ -1,6 +1,6 @@
 import animateScroll from "scrollto-with-animation";
 
-export const scrollTo = (pos, duration = 600, delay = 0) =>
+const scrollTo = (pos, duration = 600, delay = 0) =>
   new Promise(resolve => {
     setTimeout(() => {
       animateScroll(
@@ -14,12 +14,18 @@ export const scrollTo = (pos, duration = 600, delay = 0) =>
     }, delay);
   });
 
-export const kebabify = words => words.toLowerCase().replace(" ", "-");
+const kebabify = words => words.toLowerCase().replace(" ", "-");
 
-export const prettyDate = date =>
+const prettyDate = date =>
   new Date(date)
     .toString()
     .split(" ")
     .slice(0, 4)
     .join(" ")
     .replace(/( \d+)$/, ",$1");
+
+const setTitle = title => {
+  document.title = title;
+};
+
+export { kebabify, prettyDate, scrollTo, setTitle };

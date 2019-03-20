@@ -1,12 +1,14 @@
 <template>
-  <transition-group tag="div" :name="transition"  class="blog__feed">
-    <article v-for="(post, index) in feed"
+  <transition-group tag="div" :name="transition" class="blog__feed">
+    <article 
+      v-if="!slug || post.slug === slug"
+      v-for="(post, index) in posts"
       :key="index"
       class="preview"
       :hidden="!post.slug">
-      <figure class="preview__figure" :class="figureClass" :style="getBgImg(post.preview)">
+      <figure class="preview__figure" :class="figureClass" :style="getPreviewStyles(post.preview)">
         <transition name="v--fade">
-          <figcaption v-if="!reading || $device.phone"
+          <figcaption
             class="preview__details">
             <h1 class="preview__title parent v-end">
                 {{ post.title }}
@@ -43,7 +45,9 @@
 </template>
 
 <script>
-import { scrollTo, kebabify, prettyDate } from '@/constants/helpers'
+import { scrollTo, kebabify, prettyDate, setTitle } from '@/constants/helpers'
+import { BLOG_DESCRIPTION } from '@/constants/config'
+
 export default {
   name: 'blog-feed',
   resource: 'BlogFeed',
@@ -51,81 +55,60 @@ export default {
     filters: {
       type: Object,
       default: () => {}
-    }
+    },
+    slug: String,
   },
 
   data() {
     return {
-      posts: [],
-      transition: 'preview-appear'
+      transition: 'preview-appear',
+      prettyDate
     }
   },
+
   computed: {
-    reading() { return this.filters.post },
+    posts() { return this.$store.state.posts },
     scrollDelay() { return (this.$device.phone) ? 0 : 560 },
     figureClass() {
-      return { 'preview__figure--mobile': this.$device.phone && this.reading }
+      return { 'preview__figure--mobile': this.$device.phone }
     },
-
-    feed() {
-      const filterBy = {
-        slug: (filter, { slug }) => filter === slug
-      }
-
-      if (!Object.keys(this.filters).length) return this.posts
-
-      return this.posts.filter(post => {
-        return Object.keys(this.filters).every(filter => {
-          return filterBy[filter](this.filters[filter], post)
-        })
-      })
-    }
   },
 
   methods: {
     scrollTo,
     kebabify,
-    prettyDate,
 
-    getBgImg(preview) {
+    getPreviewStyles(preview) {
       const styles = Object.create(null);
-
-      if (preview) {
-        styles.backgroundImage = `url(${preview.image})`
-      }
-
+      if (preview) styles.backgroundImage = `url(${preview.image})`
       return styles;
     },
 
-    stackPosts(posts) {
-      let interval
-
-      const stack = () => {
-        this.posts.push(posts.shift())
-        if (!posts.length) {
-          this.transition = 'preview'
-          clearInterval(interval)
-        }
-      }
-
-      interval = setInterval(stack, 125)
+    loadArticles(store) {
+      return store.dispatch('getArticles')
+        .then(() => {
+          this.transition = 'preview';
+        })
     }
   },
+
+  asyncData({ store, methods }) {
+   return methods.loadArticles(store)
+  },
+
   beforeMount() {
-    this.$store.dispatch('getArticles', {
-      silent:false
-    })
-      .then(posts => {
+    if (!this.posts.length) this.loadArticles(this.$store)
+  },
 
-        if (!Object.keys(this.filters).length) {
-          this.stackPosts(posts);
-        } else {
-
-          this.posts = posts;
-          this.transition = 'preview';
-        }
-      })
-  }
+  updated() {
+    if (!this.slug) {
+      let { globalConfig } = localStorage
+      if (globalConfig) {
+        globalConfig = JSON.parse(localStorage.globalConfig)
+        setTitle(globalConfig.mainPageTitle)
+      }
+    }
+  },
 }</script>
 
 <style lang="scss" scoped>
@@ -204,6 +187,7 @@ export default {
   margin-top: 0;
   margin-bottom: 1rem;
   margin-right: 1rem;
+  word-space: nowrap;
 }
 
 </style>

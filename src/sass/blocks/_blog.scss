@@ -4,7 +4,7 @@
 }
 
 main *+* {
-    margin-top: 1.5em;
+    margin-top: 1em;
 }
 
 $initialHeadingSize: 16;
@@ -85,8 +85,9 @@ $headings: (h4, h3, h2);
     }
 
     @media (--monitor) {
-      padding: 0;
+      padding: 0 4rem;
     }
+    
   }
 
   &__footer {

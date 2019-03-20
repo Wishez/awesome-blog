@@ -6,16 +6,17 @@ const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const webpack  = require('webpack');
-const PrerenderSPAPlugin = require('prerender-spa-plugin');
-const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: './src/main.js',
   },
   output: {
     path: config.build.assetsRoot,
@@ -33,6 +34,16 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        // важно: использовать vue-style-loader вместо style-loader
+        use: isProduction
+          ? ExtractTextPlugin.extract({
+              use: 'css-loader',
+              fallback: 'vue-style-loader'
+            })
+          : ['vue-style-loader', 'css-loader']
+      },
       {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
@@ -92,24 +103,5 @@ module.exports = {
       Cookies: "js-cookie",
       localforage: 'localforage'
     }),
-
-    // == PRERENDER SPA PLUGIN == //
-   // new PrerenderSPAPlugin({
-   //   // Index.html is in the root directory.
-   //   staticDir: config.build.index,
-   //   routes: [ '/' ],
-   //   // Optional minification.
-   //   minify: {
-   //     collapseBooleanAttributes: true,
-   //     collapseWhitespace: true,
-   //     decodeEntities: true,
-   //     keepClosingSlash: true,
-   //     sortAttributes: true
-   //   },
-   //
-   //   renderer: new Renderer({
-   //     renderAfterDocumentEvent: 'render-event'
-   //   })
-   // })
   ]
 }

@@ -34,7 +34,12 @@ export default {
       }
     }
   },
+
   computed: {
+    post() {
+      return this.$store.state.post
+    },
+
     content() {
       return { title: this.title, labels: this.labels }
     },
@@ -52,11 +57,5 @@ export default {
     '$route.name' (to, from) {
       if (to !== from) this.navs++
     }
-  },
-
-  beforeMount() {
-    // this.$store.dispatch('getBlogInfo')
-      // .then(posts => { console.log(posts);})
-
   }
 }</script>

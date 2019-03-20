@@ -1,6 +1,6 @@
 <template>
   <transition name="post">
-    <article v-if="slug" class="post">
+    <article v-if="slug && !isRequesting" class="post">
       <header class="post__header">
         <h2 class="post__title">{{ post.title }}</h2>
 
@@ -22,22 +22,27 @@
         />
       </footer>
     </article>
+    <p v-else-if="slug" class="loader">Загрузка...</p>
   </transition>
 </template>
 
 <script>
 import {listenExternalLinks} from '@/constants/events';
-import { kebabify, prettyDate } from '@/constants/helpers'
+import { kebabify, prettyDate, setTitle } from '@/constants/helpers'
+
 export default {
   name: 'blog-post',
   resource: 'BlogPost',
   props: { slug: String },
 
+  asyncData({ store, route, methods }) {
+    return methods.getArticle(store, route.params.slug)
+  },
+
   data() {
     return {
-      post: {},
-      author: {},
-      commentsReady: false
+      commentsReady: false,
+      prettyDate,
     }
   },
   watch: {
@@ -45,43 +50,34 @@ export default {
       if (to === from || !this.slug || !to) return;
 
       this.commentsReady = false;
-
-      this.$store.dispatch('getArticle', {
-        slug: to,
-        silent:false
-      }).then(post => {
-        this.setPostData(post);
-        this.showComments();
-      })
+      this.getArticle(this.$store, to)
     }
   },
+
+  computed: {
+    isRequesting() { return this.$store.state.isRequesting },
+    post() {
+      return this.$store.state.post 
+    },
+
+    author() {
+      return this.$store.state.author
+    },
+  },
+
   methods: {
     kebabify,
-    prettyDate,
     showComments() {
       setTimeout(() => {
         this.commentsReady = true
       }, 1000)
     },
-
-    setPostData(post) {
-      this.post = post;
-      this.author = post.author;
-    }
   },
   beforeMount() {
     const slug = this.slug;
-
     if (!slug) return;
-
-    this.$store.dispatch('getArticle', {
-      slug,
-      silent:false
-    }).then(post => {
-      this.setPostData(post)
-    }).catch(error => {
-      console.log(error);
-    })
+    
+    if (!this.post.title) this.getArticle(this.$store, slug)
   },
 
   mounted() {
@@ -90,5 +86,17 @@ export default {
 
   updated() {
     listenExternalLinks();
+    if (this.slug) setTitle(`${this.post.title} | Филипп Журавлёв`)
+  },
+
+  methods: {
+    getArticle(store, slug) {
+      return store.dispatch('getArticle', { slug })
+    }
   }
 }</script>
+
+<style lang="sass" scoped>
+.loader
+  text-align: center
+</style>
