@@ -14,7 +14,9 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "server:app": "nodemon server/express.js",
     "server:bundle": "node build/server-bundle-build",
-    "server": "run-p server:bundle server:app"
+    "server": "run-p server:bundle server:app",
+    "container": "docker container run -d -p 3000:3000 blog-ssr-image",
+    "image": "docker image build -t blog-ssr-image ."
   },
   "dependencies": {
     "animejs": "^2.2.0",
