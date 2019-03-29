@@ -1,4 +1,4 @@
-const IS_DEV = process.env.NODE_ENV !== "production";
+const IS_DEV = process.env.NODE_ENV === "development";
 
 exports.API_ROOT = IS_DEV
   ? "localhost:8000/api/v1/"
