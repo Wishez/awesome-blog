@@ -14,7 +14,6 @@ export default request => {
     const { app, store, router } = createApp();
     const { url } = request;
     router.push(url);
-    request.meta = app.$meta();
 
     router.onReady(() => {
       const matchedComponents = router.getMatchedComponents();
