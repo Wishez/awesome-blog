@@ -15,8 +15,9 @@
     "server:app": "nodemon server/express.js",
     "server:bundle": "node build/server-bundle-build",
     "server": "run-p server:bundle server:app",
-    "container": "docker container run -d -p 3000:3000 blog-ssr-image",
-    "image": "docker image build -t blog-ssr-image ."
+    "container": "docker container stop blog-ssr && docker container rm blog-ssr && docker container run -d --name blog-ssr -p 3000:3000 blog-ssr-image",
+    "image": "npm run build && docker image build -t blog-ssr-image . && cp -R ./dist/* ../static",
+    "docker": "npm run image && npm run container"
   },
   "dependencies": {
     "animejs": "^2.2.0",
