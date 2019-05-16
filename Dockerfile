@@ -8,6 +8,6 @@ COPY ./ ./
 RUN npm i && npm i -g nodemon && npm run server:bundle
 COPY ./dist/index.html ./dist/index.html
 
-EXPOSE 3000
+EXPOSE 3080
 ENTRYPOINT ["nodemon", "./server/express.js"]
 

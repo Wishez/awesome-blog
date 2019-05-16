@@ -1,15 +1,15 @@
 {
   "errors": [
-    "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader!./node_modules/css-loader?{\"minimize\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-4ddcb898\",\"scoped\":false,\"hasInlineConfig\":false}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./src/sass/_app.scss\nModule build failed: Error: \"extract-text-webpack-plugin\" loader is used without the corresponding plugin, refer to https://github.com/webpack/extract-text-webpack-plugin for the usage example\n    at Object.pitch (C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\extract-text-webpack-plugin\\dist\\loader.js:57:11)\n @ ./src/App.vue 3:4-358\n @ ./src/create-app.js\n @ ./src/entry-server.js",
-    "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader!./node_modules/css-loader?{\"minimize\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-5c553944\",\"scoped\":true,\"hasInlineConfig\":false}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/BlogFooter.vue\nModule build failed: Error: \"extract-text-webpack-plugin\" loader is used without the corresponding plugin, refer to https://github.com/webpack/extract-text-webpack-plugin for the usage example\n    at Object.pitch (C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\extract-text-webpack-plugin\\dist\\loader.js:57:11)\n @ ./src/components/BlogFooter.vue 3:4-426\n @ ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/components/Blog.vue\n @ ./src/components/Blog.vue\n @ ./src/components/index.js\n @ ./src/router/index.js\n @ ./src/create-app.js\n @ ./src/entry-server.js",
+    "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader!./node_modules/css-loader?{\"minimize\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-832b3010\",\"scoped\":false,\"hasInlineConfig\":false}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./src/sass/_app.scss\nModule build failed: Error: \"extract-text-webpack-plugin\" loader is used without the corresponding plugin, refer to https://github.com/webpack/extract-text-webpack-plugin for the usage example\n    at Object.pitch (C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\extract-text-webpack-plugin\\dist\\loader.js:57:11)\n @ ./src/App.vue 3:4-358\n @ ./src/create-app.js\n @ ./src/entry-server.js",
     "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader!./node_modules/css-loader?{\"minimize\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-14429a42\",\"scoped\":true,\"hasInlineConfig\":false}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/BlogFeed.vue\nModule build failed: Error: \"extract-text-webpack-plugin\" loader is used without the corresponding plugin, refer to https://github.com/webpack/extract-text-webpack-plugin for the usage example\n    at Object.pitch (C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\extract-text-webpack-plugin\\dist\\loader.js:57:11)\n @ ./src/components/BlogFeed.vue 3:4-424\n @ ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/components/Blog.vue\n @ ./src/components/Blog.vue\n @ ./src/components/index.js\n @ ./src/router/index.js\n @ ./src/create-app.js\n @ ./src/entry-server.js",
+    "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader!./node_modules/css-loader?{\"minimize\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-5c553944\",\"scoped\":true,\"hasInlineConfig\":false}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/BlogFooter.vue\nModule build failed: Error: \"extract-text-webpack-plugin\" loader is used without the corresponding plugin, refer to https://github.com/webpack/extract-text-webpack-plugin for the usage example\n    at Object.pitch (C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\extract-text-webpack-plugin\\dist\\loader.js:57:11)\n @ ./src/components/BlogFooter.vue 3:4-426\n @ ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/components/Blog.vue\n @ ./src/components/Blog.vue\n @ ./src/components/index.js\n @ ./src/router/index.js\n @ ./src/create-app.js\n @ ./src/entry-server.js",
     "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader!./node_modules/css-loader?{\"minimize\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-1655b9ca\",\"scoped\":true,\"hasInlineConfig\":false}!./node_modules/sass-loader/lib/loader.js?{\"indentedSyntax\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/BlogPost.vue\nModule build failed: Error: \"extract-text-webpack-plugin\" loader is used without the corresponding plugin, refer to https://github.com/webpack/extract-text-webpack-plugin for the usage example\n    at Object.pitch (C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\extract-text-webpack-plugin\\dist\\loader.js:57:11)\n @ ./src/components/BlogPost.vue 3:4-448\n @ ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/components/Blog.vue\n @ ./src/components/Blog.vue\n @ ./src/components/index.js\n @ ./src/router/index.js\n @ ./src/create-app.js\n @ ./src/entry-server.js"
   ],
   "warnings": [
   ],
   "version": "3.12.0",
-  "hash": "a57c82a875def0197ecd",
-  "time": 9753,
+  "hash": "93836bd1a151b6758dcf",
+  "time": 19950,
   "publicPath": "",
   "assetsByChunkName": {
   },
@@ -34,7 +34,7 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 34836,
+      "size": 34837,
       "names": [
         "serverBundle"
       ],
@@ -42,7 +42,7 @@
         "serverBundle.js",
         "serverBundle.js.map"
       ],
-      "hash": "b7dbcc3b5278939ce262",
+      "hash": "0e4d266b48c6ccf14e71",
       "parents": [
       ],
       "modules": [
@@ -629,7 +629,7 @@
           "name": "./src/constants/config.js",
           "index": 29,
           "index2": 21,
-          "size": 174,
+          "size": 175,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -672,7 +672,7 @@
           "optimizationBailout": [
           ],
           "depth": 6,
-          "source": "var IS_DEV = process.env.NODE_ENV !== \"production\";\n\nexports.API_ROOT = IS_DEV ? \"localhost:8000/api/v1/\" : \"https://filipp-zhuravlev.ru/api/v1/\";\n\nexports.STATIC_PATH = \"/\";"
+          "source": "var IS_DEV = process.env.NODE_ENV === \"development\";\n\nexports.API_ROOT = IS_DEV ? \"localhost:8000/api/v1/\" : \"https://filipp-zhuravlev.ru/api/v1/\";\n\nexports.STATIC_PATH = \"/\";"
         },
         {
           "id": 11,
@@ -846,12 +846,12 @@
           "optimizationBailout": [
           ],
           "depth": 2,
-          "source": "function injectStyle (ssrContext) {\nvar i\n;(i=require(\"!!../node_modules/extract-text-webpack-plugin/dist/loader.js?{\\\"omit\\\":1,\\\"remove\\\":true}!vue-style-loader!css-loader?{\\\"minimize\\\":true,\\\"sourceMap\\\":true}!../node_modules/vue-loader/lib/style-compiler/index?{\\\"vue\\\":true,\\\"id\\\":\\\"data-v-4ddcb898\\\",\\\"scoped\\\":false,\\\"hasInlineConfig\\\":false}!sass-loader?{\\\"sourceMap\\\":true}!./sass/_app.scss\"),i.__inject__&&i.__inject__(ssrContext),i)\n}\nvar normalizeComponent = require(\"!../node_modules/vue-loader/lib/component-normalizer\")\n/* script */\nexport * from \"!!babel-loader!../node_modules/vue-loader/lib/selector?type=script&index=0!./App.vue\"\nimport __vue_script__ from \"!!babel-loader!../node_modules/vue-loader/lib/selector?type=script&index=0!./App.vue\"\n/* template */\nimport __vue_template__ from \"!!../node_modules/vue-loader/lib/template-compiler/index?{\\\"id\\\":\\\"data-v-4ddcb898\\\",\\\"hasScoped\\\":false,\\\"transformToRequire\\\":{\\\"video\\\":[\\\"src\\\",\\\"poster\\\"],\\\"source\\\":\\\"src\\\",\\\"img\\\":\\\"src\\\",\\\"image\\\":\\\"xlink:href\\\"},\\\"buble\\\":{\\\"transforms\\\":{}}}!../node_modules/vue-loader/lib/selector?type=template&index=0!./App.vue\"\n/* template functional */\nvar __vue_template_functional__ = false\n/* styles */\nvar __vue_styles__ = injectStyle\n/* scopeId */\nvar __vue_scopeId__ = null\n/* moduleIdentifier (server only) */\nvar __vue_module_identifier__ = \"d69e971a\"\nvar Component = normalizeComponent(\n  __vue_script__,\n  __vue_template__,\n  __vue_template_functional__,\n  __vue_styles__,\n  __vue_scopeId__,\n  __vue_module_identifier__\n)\n\nexport default Component.exports\n"
+          "source": "function injectStyle (ssrContext) {\nvar i\n;(i=require(\"!!../node_modules/extract-text-webpack-plugin/dist/loader.js?{\\\"omit\\\":1,\\\"remove\\\":true}!vue-style-loader!css-loader?{\\\"minimize\\\":true,\\\"sourceMap\\\":true}!../node_modules/vue-loader/lib/style-compiler/index?{\\\"vue\\\":true,\\\"id\\\":\\\"data-v-832b3010\\\",\\\"scoped\\\":false,\\\"hasInlineConfig\\\":false}!sass-loader?{\\\"sourceMap\\\":true}!./sass/_app.scss\"),i.__inject__&&i.__inject__(ssrContext),i)\n}\nvar normalizeComponent = require(\"!../node_modules/vue-loader/lib/component-normalizer\")\n/* script */\nexport * from \"!!babel-loader!../node_modules/vue-loader/lib/selector?type=script&index=0!./App.vue\"\nimport __vue_script__ from \"!!babel-loader!../node_modules/vue-loader/lib/selector?type=script&index=0!./App.vue\"\n/* template */\nimport __vue_template__ from \"!!../node_modules/vue-loader/lib/template-compiler/index?{\\\"id\\\":\\\"data-v-832b3010\\\",\\\"hasScoped\\\":false,\\\"transformToRequire\\\":{\\\"video\\\":[\\\"src\\\",\\\"poster\\\"],\\\"source\\\":\\\"src\\\",\\\"img\\\":\\\"src\\\",\\\"image\\\":\\\"xlink:href\\\"},\\\"buble\\\":{\\\"transforms\\\":{}}}!../node_modules/vue-loader/lib/selector?type=template&index=0!./App.vue\"\n/* template functional */\nvar __vue_template_functional__ = false\n/* styles */\nvar __vue_styles__ = injectStyle\n/* scopeId */\nvar __vue_scopeId__ = null\n/* moduleIdentifier (server only) */\nvar __vue_module_identifier__ = \"d69e971a\"\nvar Component = normalizeComponent(\n  __vue_script__,\n  __vue_template__,\n  __vue_template_functional__,\n  __vue_styles__,\n  __vue_scopeId__,\n  __vue_module_identifier__\n)\n\nexport default Component.exports\n"
         },
         {
           "id": 15,
-          "identifier": "C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\extract-text-webpack-plugin\\dist\\loader.js?{\"omit\":1,\"remove\":true}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\vue-style-loader\\index.js!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\css-loader\\index.js?{\"minimize\":true,\"sourceMap\":true}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\vue-loader\\lib\\style-compiler\\index.js?{\"vue\":true,\"id\":\"data-v-4ddcb898\",\"scoped\":false,\"hasInlineConfig\":false}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\sass-loader\\lib\\loader.js?{\"sourceMap\":true}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\src\\sass\\_app.scss",
-          "name": "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader!./node_modules/css-loader?{\"minimize\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-4ddcb898\",\"scoped\":false,\"hasInlineConfig\":false}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./src/sass/_app.scss",
+          "identifier": "C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\extract-text-webpack-plugin\\dist\\loader.js?{\"omit\":1,\"remove\":true}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\vue-style-loader\\index.js!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\css-loader\\index.js?{\"minimize\":true,\"sourceMap\":true}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\vue-loader\\lib\\style-compiler\\index.js?{\"vue\":true,\"id\":\"data-v-832b3010\",\"scoped\":false,\"hasInlineConfig\":false}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\sass-loader\\lib\\loader.js?{\"sourceMap\":true}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\src\\sass\\_app.scss",
+          "name": "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader!./node_modules/css-loader?{\"minimize\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-832b3010\",\"scoped\":false,\"hasInlineConfig\":false}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./src/sass/_app.scss",
           "index": 5,
           "index2": 2,
           "size": 366,
@@ -877,7 +877,7 @@
               "module": "./src/App.vue",
               "moduleName": "./src/App.vue",
               "type": "cjs require",
-              "userRequest": "!!../node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!vue-style-loader!css-loader?{\"minimize\":true,\"sourceMap\":true}!../node_modules/vue-loader/lib/style-compiler/index?{\"vue\":true,\"id\":\"data-v-4ddcb898\",\"scoped\":false,\"hasInlineConfig\":false}!sass-loader?{\"sourceMap\":true}!./sass/_app.scss",
+              "userRequest": "!!../node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!vue-style-loader!css-loader?{\"minimize\":true,\"sourceMap\":true}!../node_modules/vue-loader/lib/style-compiler/index?{\"vue\":true,\"id\":\"data-v-832b3010\",\"scoped\":false,\"hasInlineConfig\":false}!sass-loader?{\"sourceMap\":true}!./sass/_app.scss",
               "loc": "3:4-358"
             }
           ],
@@ -890,8 +890,8 @@
         },
         {
           "id": 16,
-          "identifier": "C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\vue-loader\\lib\\template-compiler\\index.js?{\"id\":\"data-v-4ddcb898\",\"hasScoped\":false,\"transformToRequire\":{\"video\":[\"src\",\"poster\"],\"source\":\"src\",\"img\":\"src\",\"image\":\"xlink:href\"},\"buble\":{\"transforms\":{}}}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\vue-loader\\lib\\selector.js?type=template&index=0!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\src\\App.vue",
-          "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-4ddcb898\",\"hasScoped\":false,\"transformToRequire\":{\"video\":[\"src\",\"poster\"],\"source\":\"src\",\"img\":\"src\",\"image\":\"xlink:href\"},\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/App.vue",
+          "identifier": "C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\vue-loader\\lib\\template-compiler\\index.js?{\"id\":\"data-v-832b3010\",\"hasScoped\":false,\"transformToRequire\":{\"video\":[\"src\",\"poster\"],\"source\":\"src\",\"img\":\"src\",\"image\":\"xlink:href\"},\"buble\":{\"transforms\":{}}}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\vue-loader\\lib\\selector.js?type=template&index=0!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\src\\App.vue",
+          "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-832b3010\",\"hasScoped\":false,\"transformToRequire\":{\"video\":[\"src\",\"poster\"],\"source\":\"src\",\"img\":\"src\",\"image\":\"xlink:href\"},\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/App.vue",
           "index": 8,
           "index2": 5,
           "size": 254,
@@ -917,7 +917,7 @@
               "module": "./src/App.vue",
               "moduleName": "./src/App.vue",
               "type": "harmony import",
-              "userRequest": "!!../node_modules/vue-loader/lib/template-compiler/index?{\"id\":\"data-v-4ddcb898\",\"hasScoped\":false,\"transformToRequire\":{\"video\":[\"src\",\"poster\"],\"source\":\"src\",\"img\":\"src\",\"image\":\"xlink:href\"},\"buble\":{\"transforms\":{}}}!../node_modules/vue-loader/lib/selector?type=template&index=0!./App.vue",
+              "userRequest": "!!../node_modules/vue-loader/lib/template-compiler/index?{\"id\":\"data-v-832b3010\",\"hasScoped\":false,\"transformToRequire\":{\"video\":[\"src\",\"poster\"],\"source\":\"src\",\"img\":\"src\",\"image\":\"xlink:href\"},\"buble\":{\"transforms\":{}}}!../node_modules/vue-loader/lib/selector?type=template&index=0!./App.vue",
               "loc": "10:0-354"
             }
           ],
@@ -2891,7 +2891,7 @@
       "name": "./src/constants/config.js",
       "index": 29,
       "index2": 21,
-      "size": 174,
+      "size": 175,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -2934,7 +2934,7 @@
       "optimizationBailout": [
       ],
       "depth": 6,
-      "source": "var IS_DEV = process.env.NODE_ENV !== \"production\";\n\nexports.API_ROOT = IS_DEV ? \"localhost:8000/api/v1/\" : \"https://filipp-zhuravlev.ru/api/v1/\";\n\nexports.STATIC_PATH = \"/\";"
+      "source": "var IS_DEV = process.env.NODE_ENV === \"development\";\n\nexports.API_ROOT = IS_DEV ? \"localhost:8000/api/v1/\" : \"https://filipp-zhuravlev.ru/api/v1/\";\n\nexports.STATIC_PATH = \"/\";"
     },
     {
       "id": 11,
@@ -3108,12 +3108,12 @@
       "optimizationBailout": [
       ],
       "depth": 2,
-      "source": "function injectStyle (ssrContext) {\nvar i\n;(i=require(\"!!../node_modules/extract-text-webpack-plugin/dist/loader.js?{\\\"omit\\\":1,\\\"remove\\\":true}!vue-style-loader!css-loader?{\\\"minimize\\\":true,\\\"sourceMap\\\":true}!../node_modules/vue-loader/lib/style-compiler/index?{\\\"vue\\\":true,\\\"id\\\":\\\"data-v-4ddcb898\\\",\\\"scoped\\\":false,\\\"hasInlineConfig\\\":false}!sass-loader?{\\\"sourceMap\\\":true}!./sass/_app.scss\"),i.__inject__&&i.__inject__(ssrContext),i)\n}\nvar normalizeComponent = require(\"!../node_modules/vue-loader/lib/component-normalizer\")\n/* script */\nexport * from \"!!babel-loader!../node_modules/vue-loader/lib/selector?type=script&index=0!./App.vue\"\nimport __vue_script__ from \"!!babel-loader!../node_modules/vue-loader/lib/selector?type=script&index=0!./App.vue\"\n/* template */\nimport __vue_template__ from \"!!../node_modules/vue-loader/lib/template-compiler/index?{\\\"id\\\":\\\"data-v-4ddcb898\\\",\\\"hasScoped\\\":false,\\\"transformToRequire\\\":{\\\"video\\\":[\\\"src\\\",\\\"poster\\\"],\\\"source\\\":\\\"src\\\",\\\"img\\\":\\\"src\\\",\\\"image\\\":\\\"xlink:href\\\"},\\\"buble\\\":{\\\"transforms\\\":{}}}!../node_modules/vue-loader/lib/selector?type=template&index=0!./App.vue\"\n/* template functional */\nvar __vue_template_functional__ = false\n/* styles */\nvar __vue_styles__ = injectStyle\n/* scopeId */\nvar __vue_scopeId__ = null\n/* moduleIdentifier (server only) */\nvar __vue_module_identifier__ = \"d69e971a\"\nvar Component = normalizeComponent(\n  __vue_script__,\n  __vue_template__,\n  __vue_template_functional__,\n  __vue_styles__,\n  __vue_scopeId__,\n  __vue_module_identifier__\n)\n\nexport default Component.exports\n"
+      "source": "function injectStyle (ssrContext) {\nvar i\n;(i=require(\"!!../node_modules/extract-text-webpack-plugin/dist/loader.js?{\\\"omit\\\":1,\\\"remove\\\":true}!vue-style-loader!css-loader?{\\\"minimize\\\":true,\\\"sourceMap\\\":true}!../node_modules/vue-loader/lib/style-compiler/index?{\\\"vue\\\":true,\\\"id\\\":\\\"data-v-832b3010\\\",\\\"scoped\\\":false,\\\"hasInlineConfig\\\":false}!sass-loader?{\\\"sourceMap\\\":true}!./sass/_app.scss\"),i.__inject__&&i.__inject__(ssrContext),i)\n}\nvar normalizeComponent = require(\"!../node_modules/vue-loader/lib/component-normalizer\")\n/* script */\nexport * from \"!!babel-loader!../node_modules/vue-loader/lib/selector?type=script&index=0!./App.vue\"\nimport __vue_script__ from \"!!babel-loader!../node_modules/vue-loader/lib/selector?type=script&index=0!./App.vue\"\n/* template */\nimport __vue_template__ from \"!!../node_modules/vue-loader/lib/template-compiler/index?{\\\"id\\\":\\\"data-v-832b3010\\\",\\\"hasScoped\\\":false,\\\"transformToRequire\\\":{\\\"video\\\":[\\\"src\\\",\\\"poster\\\"],\\\"source\\\":\\\"src\\\",\\\"img\\\":\\\"src\\\",\\\"image\\\":\\\"xlink:href\\\"},\\\"buble\\\":{\\\"transforms\\\":{}}}!../node_modules/vue-loader/lib/selector?type=template&index=0!./App.vue\"\n/* template functional */\nvar __vue_template_functional__ = false\n/* styles */\nvar __vue_styles__ = injectStyle\n/* scopeId */\nvar __vue_scopeId__ = null\n/* moduleIdentifier (server only) */\nvar __vue_module_identifier__ = \"d69e971a\"\nvar Component = normalizeComponent(\n  __vue_script__,\n  __vue_template__,\n  __vue_template_functional__,\n  __vue_styles__,\n  __vue_scopeId__,\n  __vue_module_identifier__\n)\n\nexport default Component.exports\n"
     },
     {
       "id": 15,
-      "identifier": "C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\extract-text-webpack-plugin\\dist\\loader.js?{\"omit\":1,\"remove\":true}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\vue-style-loader\\index.js!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\css-loader\\index.js?{\"minimize\":true,\"sourceMap\":true}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\vue-loader\\lib\\style-compiler\\index.js?{\"vue\":true,\"id\":\"data-v-4ddcb898\",\"scoped\":false,\"hasInlineConfig\":false}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\sass-loader\\lib\\loader.js?{\"sourceMap\":true}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\src\\sass\\_app.scss",
-      "name": "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader!./node_modules/css-loader?{\"minimize\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-4ddcb898\",\"scoped\":false,\"hasInlineConfig\":false}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./src/sass/_app.scss",
+      "identifier": "C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\extract-text-webpack-plugin\\dist\\loader.js?{\"omit\":1,\"remove\":true}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\vue-style-loader\\index.js!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\css-loader\\index.js?{\"minimize\":true,\"sourceMap\":true}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\vue-loader\\lib\\style-compiler\\index.js?{\"vue\":true,\"id\":\"data-v-832b3010\",\"scoped\":false,\"hasInlineConfig\":false}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\sass-loader\\lib\\loader.js?{\"sourceMap\":true}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\src\\sass\\_app.scss",
+      "name": "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader!./node_modules/css-loader?{\"minimize\":true,\"sourceMap\":true}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-832b3010\",\"scoped\":false,\"hasInlineConfig\":false}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./src/sass/_app.scss",
       "index": 5,
       "index2": 2,
       "size": 366,
@@ -3139,7 +3139,7 @@
           "module": "./src/App.vue",
           "moduleName": "./src/App.vue",
           "type": "cjs require",
-          "userRequest": "!!../node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!vue-style-loader!css-loader?{\"minimize\":true,\"sourceMap\":true}!../node_modules/vue-loader/lib/style-compiler/index?{\"vue\":true,\"id\":\"data-v-4ddcb898\",\"scoped\":false,\"hasInlineConfig\":false}!sass-loader?{\"sourceMap\":true}!./sass/_app.scss",
+          "userRequest": "!!../node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!vue-style-loader!css-loader?{\"minimize\":true,\"sourceMap\":true}!../node_modules/vue-loader/lib/style-compiler/index?{\"vue\":true,\"id\":\"data-v-832b3010\",\"scoped\":false,\"hasInlineConfig\":false}!sass-loader?{\"sourceMap\":true}!./sass/_app.scss",
           "loc": "3:4-358"
         }
       ],
@@ -3152,8 +3152,8 @@
     },
     {
       "id": 16,
-      "identifier": "C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\vue-loader\\lib\\template-compiler\\index.js?{\"id\":\"data-v-4ddcb898\",\"hasScoped\":false,\"transformToRequire\":{\"video\":[\"src\",\"poster\"],\"source\":\"src\",\"img\":\"src\",\"image\":\"xlink:href\"},\"buble\":{\"transforms\":{}}}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\vue-loader\\lib\\selector.js?type=template&index=0!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\src\\App.vue",
-      "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-4ddcb898\",\"hasScoped\":false,\"transformToRequire\":{\"video\":[\"src\",\"poster\"],\"source\":\"src\",\"img\":\"src\",\"image\":\"xlink:href\"},\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/App.vue",
+      "identifier": "C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\vue-loader\\lib\\template-compiler\\index.js?{\"id\":\"data-v-832b3010\",\"hasScoped\":false,\"transformToRequire\":{\"video\":[\"src\",\"poster\"],\"source\":\"src\",\"img\":\"src\",\"image\":\"xlink:href\"},\"buble\":{\"transforms\":{}}}!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\node_modules\\vue-loader\\lib\\selector.js?type=template&index=0!C:\\Users\\shiningfinger\\collections\\awesome_blog\\front-end\\src\\App.vue",
+      "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-832b3010\",\"hasScoped\":false,\"transformToRequire\":{\"video\":[\"src\",\"poster\"],\"source\":\"src\",\"img\":\"src\",\"image\":\"xlink:href\"},\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/App.vue",
       "index": 8,
       "index2": 5,
       "size": 254,
@@ -3179,7 +3179,7 @@
           "module": "./src/App.vue",
           "moduleName": "./src/App.vue",
           "type": "harmony import",
-          "userRequest": "!!../node_modules/vue-loader/lib/template-compiler/index?{\"id\":\"data-v-4ddcb898\",\"hasScoped\":false,\"transformToRequire\":{\"video\":[\"src\",\"poster\"],\"source\":\"src\",\"img\":\"src\",\"image\":\"xlink:href\"},\"buble\":{\"transforms\":{}}}!../node_modules/vue-loader/lib/selector?type=template&index=0!./App.vue",
+          "userRequest": "!!../node_modules/vue-loader/lib/template-compiler/index?{\"id\":\"data-v-832b3010\",\"hasScoped\":false,\"transformToRequire\":{\"video\":[\"src\",\"poster\"],\"source\":\"src\",\"img\":\"src\",\"image\":\"xlink:href\"},\"buble\":{\"transforms\":{}}}!../node_modules/vue-loader/lib/selector?type=template&index=0!./App.vue",
           "loc": "10:0-354"
         }
       ],
